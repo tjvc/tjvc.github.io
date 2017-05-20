@@ -8,3 +8,26 @@
   margin: 0 auto;
   display: block;
 }
+
+nav {
+  float: right;
+  line-height: $base-line-height * $base-font-size * 2.25;
+
+  .nav-trigger {
+      display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
