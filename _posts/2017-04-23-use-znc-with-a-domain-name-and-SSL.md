@@ -37,7 +37,7 @@ And after that, I just had to run the tool with the `--apache` option:
 $ sudo certbot --apache
 ```
 
-Certbot will then ask you to specify which domain you want to issue a certificate for, to provide a contact email address, and to choose whether you want to enable both HTTP and HTTPS access or to redirect all requests to HTTPS (I'd recommend the latter). This will create and enable an Apache configuration file (`/etc/apache2/sites-available/000-default-le-ssl.conf`) with the required SSL configuration directives. If you choose to redirect all requests to HTTPS, Certbot will also update your default Apache configuration file (`/etc/apache2/sites-available/000-default.conf`) to enable this.
+Certbot will then ask you to specify which domain name you want to issue a certificate for, to provide a contact email address, and to choose whether you want to enable both HTTP and HTTPS access or to redirect all requests to HTTPS (I'd recommend the latter). This will create and enable an Apache configuration file (`/etc/apache2/sites-available/000-default-le-ssl.conf`) with the required SSL configuration directives. If you choose to redirect all requests to HTTPS, Certbot will also update your default Apache configuration file (`/etc/apache2/sites-available/000-default.conf`) to enable this.
 
 Once the certificate files have been installed for Apache, we need to concatenate them in a single file in the ZNC directory (which, for me, is in the home directory of the `znc` user).
 
@@ -65,7 +65,7 @@ Now Certbot will renew the certificate, if required, once a month, and create a 
 
 ## Set up a reverse proxy
 
-To make the ZNC web interface available at a given domain, we need to set up a [reverse proxy](https://httpd.apache.org/docs/2.4/mod/mod_proxy.html#forwardreverse). This will direct HTTP(S) requests to the server on ports 80 and 443 to the ZNC web interface running on port 8080. On my server, I used Apache to set up a reverse proxy. To do this, we first have to enable the `mod_proxy` and `mod_proxy_http` modules:
+To make the ZNC web interface available at a given domain name, we need to set up a [reverse proxy](https://httpd.apache.org/docs/2.4/mod/mod_proxy.html#forwardreverse). This will direct HTTP(S) requests to the server on ports 80 and 443 to the ZNC web interface running on port 8080. On my server, I used Apache to set up a reverse proxy. To do this, we first have to enable the `mod_proxy` and `mod_proxy_http` modules:
 
 ```
 $ sudo a2enmod proxy proxy_http
@@ -78,4 +78,4 @@ ProxyPass "/" "http://127.0.0.1:8080/"
 ProxyPassReverse "/" "http://127.0.0.1:8080/"
 ```
 
-And that's it, you should now be able to use your domain to make encrypted connections to ZNC's IRC server and web interface!
+And that's it, you should now be able to use your domain name to make encrypted connections to ZNC's IRC server and web interface!
