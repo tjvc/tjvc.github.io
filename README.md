@@ -6,3 +6,4 @@ My blog, https://blog.tjvc.uk.
 * About
 * Favicon
 * Google Analytics
+* Tags
