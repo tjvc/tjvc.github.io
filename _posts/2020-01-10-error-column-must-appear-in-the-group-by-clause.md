@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ERROR: column ... must appear in the GROUP BY clause or be used in an aggregate function"
-date:   2020-01-03
+date:   2020-01-10
 ---
 
 This makes sense, because if we try to `SELECT` a column not included in the `GROUP BY` clause and there are multiple possible values for that column in a group, the database will not know which value to return.
