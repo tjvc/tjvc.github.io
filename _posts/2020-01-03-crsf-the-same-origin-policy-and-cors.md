@@ -6,9 +6,9 @@ date:   2020-01-03
 
 ## CSRF
 
-Cross Site Request Forgery (CSRF) is an attack method by which an attacker can trick a user into making requests to a web service with which they have previously authenticated. It allows the attacker to perform destructive operations or extract data from the target service.
+Using Cross Site Request Forgery (CSRF), an attacker can trick a user into making requests to a web service with which they have previously authenticated. It allows the attacker to perform destructive operations or extract data from the target service.
 
-For example, assume a user has previously authenticated with Facebook. An attacker could trick this user into making requests to Facebook by clicking a link or executing some malicious client-side code, either on the attacker's own site or injected into another page. A classic example is embedding an image tag on a page visited by the user, with the tag linking to a protected resource on the target service. The browser will automatically attempt to resolve the link in the tag when loading the page, thereby performing the request without the user's consent.
+Assume a user has previously authenticated with Facebook, for example. An attacker could trick this user into making requests to Facebook by clicking a link or executing some malicious client-side code, either on the attacker's own site or injected into another page. A classic example is embedding an image tag on a page visited by the user, with the tag linking to a protected resource on the target service. The browser will automatically attempt to resolve the link in the tag when loading the page, thereby performing the request without the user's consent.
 
 ## The same-origin policy
 
@@ -30,7 +30,7 @@ For credentials (cookies) to be used in such requests, they must be explicitly i
 
 HTTP methods should be used as intended. Specifically, use `POST` not `GET` for state-changing operations. Assuming that this is the case, non-AJAX `GET` requests can be considered safe, as even if they are unintended, the response is just returned harmlessly to the user's browser.
 
-`POST` requests can be protected by including a security token, verified by the server, in forms and AJAX requests, as happens in Rails.
+`POST` requests can be protected by including a security token, verified by the server, in forms and AJAX requests, as happens in Ruby on Rails.
 
 `GET` requests for dynamic JavaScript resources can be vulnerable, as an attacker could include such a script in a `<script>` tag (exempt from the same-origin policy) on her own page, and potentially extract user data after the script has executed (e.g. from a global variable). Rails prevents embedding of JavaScript responses by default for this reason.
 

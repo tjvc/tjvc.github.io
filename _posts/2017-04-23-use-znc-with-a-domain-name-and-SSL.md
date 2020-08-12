@@ -4,11 +4,11 @@ title:  "How to use ZNC with a domain name over SSL"
 date:   2017-04-23
 ---
 
-[ZNC](http://wiki.znc.in/) is an IRC bouncer, a service that connects to an IRC server and relays messages between that server and your IRC client. ZNC offers [several benefits](http://wiki.znc.in/Introduction): it can maintain a connection to an IRC server after a client disconnects, for example, and buffer messages sent while the client is disconnected.
+[ZNC](http://wiki.znc.in/) is an IRC bouncer, a service that connects to an IRC server and relays messages between that server and your IRC client. ZNC offers [several benefits](http://wiki.znc.in/Introduction): it can maintain a connection to an IRC server after a client disconnects and buffer messages sent while the client is disconnected.
 
 I've been running ZNC on a VPS for a while, using a self-signed SSL certificate for encrypted connections. I thought it would be nice to use a subdomain to access the web interface and for IRC connections, which in turn would allow me to use a verified SSL certificate from [Let's Encrypt](https://letsencrypt.org/). This is how I did it.
 
-This guide assumes that you already have a server running ZNC ([this is a good guide to getting set up](https://www.vultr.com/docs/install-and-setup-znc-on-ubuntu)), and a domain name pointing to that server. I used the Apache web server running on Ubuntu to enable access to the ZNC web interface via our domain name on ports 80 and 443, and the examples below reflect that. If your server's behind a firewall, you'll also want to make sure that you've opened ports 80, 443 and 6697.
+This guide assumes that you already have a server running ZNC ([this is a good guide to getting set up](https://www.vultr.com/docs/install-and-setup-znc-on-ubuntu)), and a domain name pointing to that server. I used the Apache web server running on Ubuntu to enable access to the ZNC web interface via my domain name on ports 80 and 443, and the examples below reflect that. If your server's behind a firewall, you'll also want to make sure that you've opened ports 80, 443 and 6697.
 
 ## Configure ZNC
 
