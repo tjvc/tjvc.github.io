@@ -16,7 +16,7 @@
 title: blog
 author: Thom Carter
 description: > # this means to ignore newlines until "baseurl:"
-  A place to share notes about work and other projects
+  Notes about work and other projects
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: tjvc
