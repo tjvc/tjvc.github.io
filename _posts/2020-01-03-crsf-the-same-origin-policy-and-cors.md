@@ -8,7 +8,7 @@ date:   2020-01-03
 
 Using Cross Site Request Forgery (CSRF), an attacker can trick a user into making requests to a web service with which they have previously authenticated. This allows the attacker to perform destructive operations or extract data from the target service.
 
-Assume a user has previously authenticated with Facebook, for example. An attacker could trick this user into making requests to Facebook by clicking a link or executing some malicious client-side code, either on the attacker's own site or injected into another page. A classic example is embedding an image tag on a page visited by the user, with the tag linking to a protected resource on the target service. The browser will automatically attempt to resolve the link in the tag when loading the page, thereby performing the request without the user's consent.
+Assume a user has previously authenticated with Facebook. An attacker could trick this user into making requests to Facebook by clicking a link or executing some malicious client-side code, either on the attacker's own site or injected into another page. A classic example is embedding an image tag on a page visited by the user, with the tag linking to a protected resource on the target service. The browser will automatically attempt to resolve the link in the tag when loading the page, thereby performing the request without the user's consent.
 
 ## The same-origin policy
 
