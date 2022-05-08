@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li class="post-list-item">
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <time class="post-meta">{{ post.date | date: site.date_format }}</time>
+    </li>
+  {% endfor %}
+</ul>

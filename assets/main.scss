@@ -2,32 +2,24 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "minima";
-
-.center-image {
-  margin: 0 auto;
-  display: block;
+.contacts-list {
+  list-style: none;
+  padding-left: 0;
 }
 
-nav {
-  float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+.footer-list {
+  @extend .contacts-list;
+}
 
-  .nav-trigger {
-      display: none;
-  }
+.post-list {
+  @extend .contacts-list;
+}
 
-  .menu-icon {
-    display: none;
-  }
+.post-list-item {
+  margin-bottom: 1em;
+}
 
-  .page-link {
-    color: $text-color;
-    line-height: $base-line-height;
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
+.post-meta {
+  font-style: italic;
+  display: block;
 }

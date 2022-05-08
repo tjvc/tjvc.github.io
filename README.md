@@ -1,9 +1,8 @@
-My blog, https://blog.tjvc.uk.
+My blog, <https://blog.tjvc.uk>.
 
 # TODO
 
-* Comments
-* About
+* ~About~
 * ~Favicon~
-* Google Analytics
-* Tags
+* Analytics
+* Clean-up/remove theme files
